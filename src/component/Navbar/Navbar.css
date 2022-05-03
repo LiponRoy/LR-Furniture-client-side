@@ -1,0 +1,81 @@
+.liponNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(129, 210, 248, 0.842);
+    height: 10vh;
+    padding: 0px 20px;
+    position: relative;
+}
+.leftSide{
+flex: 1;
+}
+.middleSide{
+    
+flex: 1;
+
+}
+.rightSide {
+        flex: 1;
+
+}
+.allLink {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.myLink {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 22px;
+}
+.myLink:hover {
+    color: rgb(255, 255, 255) ;
+}
+
+.active-myLink {
+    color: rgb(253, 29, 29) ;
+    text-decoration: none;
+    font-size: 22px;
+}
+.active-myLink:hover {
+    color: rgb(253, 29, 29) ;
+}
+.toggleBut {
+    display: none;
+ }
+
+
+            @media (max-width: 768px) {
+                                .toggleBut {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        color: rgb(255, 255, 255);
+                                        font-size: 22px;
+                                }
+                                
+                                .allLink {
+                                    display: none;
+                                }
+                                
+                                #notHidden {
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 74px;
+                                    height: 250px;
+                                    width: 100%;
+                                    background-color: rgb(129, 210, 248);
+
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                }
+
+               
+            }
+

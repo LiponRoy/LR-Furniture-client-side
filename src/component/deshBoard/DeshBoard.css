@@ -1,0 +1,13 @@
+.myDeshBoard {
+    height: 80vh;
+    background-color: darkgoldenrod;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allText {
+    color: white;
+
+}

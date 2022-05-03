@@ -1,0 +1,13 @@
+.ProfileHeader {
+    height: 80vh;
+    background-color: rgb(9, 75, 80);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allText {
+    color: white;
+
+}

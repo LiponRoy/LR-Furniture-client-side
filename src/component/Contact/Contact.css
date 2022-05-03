@@ -1,0 +1,13 @@
+.ContactHeader{
+    height: 80vh;
+    background-color: rgb(104, 184, 14);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .allText {
+        color: white;
+    
+    }
