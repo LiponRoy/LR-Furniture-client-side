@@ -1,0 +1,102 @@
+
+.mainSld {
+    margin: 0px 0px;
+}
+.slick-arrow.slick-prev {
+    background-color: rgb(255, 255, 255);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5;
+
+}
+.slick-arrow.slick-prev:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+    .slick-arrow.slick-next {
+    background-color: rgb(255, 255, 255);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    
+        position: absolute;
+        right: 8px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        z-index: 5;
+    }
+
+    .slick-arrow.slick-next:hover {
+        background-color: rgb(255, 255, 255);
+    }
+
+        .slick-arrow.slick-prev::before {
+        /* // display: none; */
+        content: '\276E';
+        color: rgb(255, 0, 0);
+        font-size: 40px;
+        z-index: 5;
+    }
+
+    .slick-arrow.slick-next::before {
+        /* // display: none; */
+        content: '\276F';
+        color: rgb(255, 6, 6);
+        font-size: 40px;
+        z-index: 5;
+    }
+                    .textAll {
+                        text-align: center;
+                        color: rgb(255, 255, 255);
+                        padding: 2px;
+                        position: absolute;
+                        bottom: 140px;
+                        left: 100px;
+                        background-color: rgba(46, 29, 141, 0.493);
+                        padding: 22px;
+                        border-radius: 12px;
+
+                    }
+
+
+
+/* ////Fast slide */
+
+.carddMe .iteams .imgPart {
+    position: relative;
+    
+
+}
+
+.carddMe .iteams .imgPart img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    
+}
+
+.leftside{
+            width: 100%;
+            height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    color: rgb(26, 26, 26);
+    font-size: 54px;
+    /* border: 5px solid red; */
+
+
+}
