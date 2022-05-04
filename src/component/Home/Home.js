@@ -1,18 +1,12 @@
 import React from 'react';
+import AllProduct from './allProduct/AllProduct';
 import './Home.css';
 
 const Home = () => {
 	return (
 		<div className='container-fluid'>
-			<div className='myHeader'>
-				<div className='row'>
-					<div className='col-md-6'>
-						<h1>Home page</h1>
-					</div>
-					<div className='col-md-6 '></div>
-				</div>
-			</div>
-			{/* // all product will be showing here */}
+			<h1>Bangladeshi</h1>
+			<AllProduct></AllProduct>
 		</div>
 	);
 };

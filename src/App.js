@@ -8,6 +8,7 @@ import NavbarTwo from './component/Navbar/NavbarTwo';
 import Profile from './component/Profile/Profile';
 import DeshBoard from './component/deshBoard/DeshBoard';
 import { createContext, useState } from 'react';
+import Inventory from './component/Inventory/Inventory';
 // context Api use
 export const myContext = createContext();
 function App() {
@@ -24,6 +25,7 @@ function App() {
 					<Route path='/profile' element={<Profile />} />
 
 					<Route path='/deshBoard/:id' element={<DeshBoard />} />
+					<Route path='/Inventory/:id' element={<Inventory />} />
 					{/* <Route path='/blog/:id' element={<About />} /> */}
 					<Route path='*' element={<NotFound />} />
 				</Routes>
