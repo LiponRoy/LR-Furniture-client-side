@@ -65,12 +65,6 @@ const Inventory = () => {
 
 				{/* <h4>Stock :{singleProduct.stock}</h4> */}
 				<br></br>
-				<button
-					onClick={() => {
-						navigate('/ManageProducts');
-					}}>
-					Manage Prod{' '}
-				</button>
 				<form onSubmit={handleSubmit} className=''>
 					<input type='text' name='name' placeholder='Update your stock here' required />
 					<button type='submit' value='add user'>
@@ -79,6 +73,13 @@ const Inventory = () => {
 				</form>
 
 				<button onClick={() => dilever()}>delevir</button>
+				<br></br>
+				<button
+					onClick={() => {
+						navigate('/manageProduct');
+					}}>
+					Manage Prod
+				</button>
 			</div>
 		</div>
 	);

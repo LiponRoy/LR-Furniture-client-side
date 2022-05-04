@@ -9,6 +9,8 @@ import Profile from './component/Profile/Profile';
 import DeshBoard from './component/deshBoard/DeshBoard';
 import { createContext, useState } from 'react';
 import Inventory from './component/Inventory/Inventory';
+import ManageProduct from './component/ManageProduct/ManageProduct';
+import AddNewIteam from './component/add new item/AddNewIteam';
 // context Api use
 export const myContext = createContext();
 function App() {
@@ -23,9 +25,10 @@ function App() {
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/profile' element={<Profile />} />
-
 					<Route path='/deshBoard/:id' element={<DeshBoard />} />
 					<Route path='/Inventory/:id' element={<Inventory />} />
+					<Route path='/manageProduct' element={<ManageProduct />} />
+					<Route path='/addNewItem' element={<AddNewIteam />} />
 					{/* <Route path='/blog/:id' element={<About />} /> */}
 					<Route path='*' element={<NotFound />} />
 				</Routes>
