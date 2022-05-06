@@ -8,13 +8,13 @@ const ManageProduct = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('http://localhost:4000/product/getData')
+		fetch('https://infinite-depths-44773.herokuapp.com/product/getData')
 			.then(response => response.json())
 			.then(data => setProdect(data.allProduct));
 	}, [product]);
 
 	const deleteProduct = id => {
-		fetch(`http://localhost:4000/product/deleteData/${id}`)
+		fetch(`https://infinite-depths-44773.herokuapp.com/product/deleteData/${id}`)
 			.then(response => response.json())
 			.then(data => data);
 	};

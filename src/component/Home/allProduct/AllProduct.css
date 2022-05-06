@@ -1,6 +1,10 @@
-.everyproduct{
+.product-card{
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
+
+    background-color: rgba(27, 227, 238, 0.596);
+    margin: 12px;
+    padding: 12px;
 }

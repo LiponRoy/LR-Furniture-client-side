@@ -6,14 +6,14 @@ const Inventory = () => {
 	const navigate = useNavigate();
 	const [singleProduct, setSingleProduct] = useState([]);
 
-	const url = `http://localhost:4000/product/getSingleDataByID/${id}`;
+	const url = `https://infinite-depths-44773.herokuapp.com/product/getSingleDataByID/${id}`;
 
 	const dilever = () => {
 		let dd = Number(singleProduct.quantity) - 1;
 		const quantity = dd;
 		const updateQuantity = { quantity };
 
-		const url = `http://localhost:4000/product/updateData/${id}`;
+		const url = `https://infinite-depths-44773.herokuapp.com/product/updateData/${id}`;
 		fetch(url, {
 			method: 'PUT',
 			headers: {
@@ -33,7 +33,7 @@ const Inventory = () => {
 		const quantity = current_quantity;
 		const updatequantity = { quantity };
 
-		const url = `http://localhost:4000/product/updateData/${id}`;
+		const url = `https://infinite-depths-44773.herokuapp.com/product/updateData/${id}`;
 		fetch(url, {
 			method: 'PUT',
 			headers: {

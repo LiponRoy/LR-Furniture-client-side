@@ -10,7 +10,7 @@ const AllProduct = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('http://localhost:4000/product/getData')
+		fetch('https://infinite-depths-44773.herokuapp.com/product/getData')
 			.then(response => response.json())
 			.then(data => setProduct(data.allProduct));
 	}, []);
@@ -20,16 +20,18 @@ const AllProduct = () => {
 			<div className='row'>
 				{product.map(prod => (
 					<div key={prod._id} className='col-md-4'>
-						<div className='everyproduct'>
-							<img src={prod.imgUrl} alt='' width='300px' />
-							<span>{prod.name}</span>
-							<span>{prod.price}</span>
-							<span>{prod.quantity}</span>
-							<span>{prod.supplier}</span>
+						<div className=''>
+							<div className='product-card'>
+								<img src={prod.imgUrl} alt='' width='300px' />
+								<span>{prod.name}</span>
+								<span>{prod.price}</span>
+								<span>{prod.quantity}</span>
+								<span>{prod.supplier}</span>
 
-							<button className='btn btn-primary' onClick={() => navigate(`/Inventory/${prod._id}`)}>
-								Update
-							</button>
+								<button className='btn btn-primary' onClick={() => navigate(`/Inventory/${prod._id}`)}>
+									Update
+								</button>
+							</div>
 						</div>
 					</div>
 				))}

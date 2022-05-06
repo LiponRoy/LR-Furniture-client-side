@@ -14,7 +14,7 @@ const AddNewIteam = () => {
 		console.log(data);
 		//	const updateStock = { data };
 
-		const url = `http://localhost:4000/product/insertdata`;
+		const url = `https://infinite-depths-44773.herokuapp.com/product/insertdata`;
 		fetch(url, {
 			method: 'POST',
 			headers: {
