@@ -11,6 +11,8 @@ import { createContext, useState } from 'react';
 import Inventory from './component/Inventory/Inventory';
 import ManageProduct from './component/ManageProduct/ManageProduct';
 import AddNewIteam from './component/add new item/AddNewIteam';
+import Signup from './component/Signup/Signup';
+import Login from './component/Login/Login';
 // context Api use
 export const myContext = createContext();
 function App() {
@@ -29,6 +31,8 @@ function App() {
 					<Route path='/Inventory/:id' element={<Inventory />} />
 					<Route path='/manageProduct' element={<ManageProduct />} />
 					<Route path='/addNewItem' element={<AddNewIteam />} />
+					<Route path='/signup' element={<Signup />} />
+					<Route path='/login' element={<Login />} />
 					{/* <Route path='/blog/:id' element={<About />} /> */}
 					<Route path='*' element={<NotFound />} />
 				</Routes>

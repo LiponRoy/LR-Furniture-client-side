@@ -1,0 +1,29 @@
+.ContactHeader {
+    height: 80vh;
+    background-color: rgb(104, 184, 14);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allText {
+    color: white;
+
+}
+
+.signUpError {
+    color: red;
+}
+
+.signup-contain{
+    height: 100vh;
+    margin-top: 120px;
+    text-align: start;
+
+}
+.my-signup-form{
+background-color: rgba(8, 105, 196, 0.377);
+    padding: 12px;
+    border-radius: 12px;
+}

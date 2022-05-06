@@ -1,0 +1,27 @@
+.goToSignupPage {
+    color: rgb(12, 39, 192);
+    cursor: pointer;
+    font-size: 17px;
+}
+.resetPass-part{
+    margin-right: 5px;
+    padding: 4px;
+}
+
+.epError {
+    color: red;
+    font-size: 22px;
+}
+
+.signup-contain {
+    height: 100vh;
+    margin-top: 120px;
+    text-align: start;
+
+}
+
+.my-signup-form {
+    background-color: rgba(8, 105, 196, 0.377);
+    padding: 12px;
+    border-radius: 12px;
+}
