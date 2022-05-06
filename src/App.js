@@ -13,6 +13,7 @@ import ManageProduct from './component/ManageProduct/ManageProduct';
 import AddNewIteam from './component/add new item/AddNewIteam';
 import Signup from './component/Signup/Signup';
 import Login from './component/Login/Login';
+import RequireAuth from './component/Require-Auth/RequireAuth';
 // context Api use
 export const myContext = createContext();
 function App() {
@@ -28,7 +29,14 @@ function App() {
 					<Route path='/about' element={<About />} />
 					<Route path='/profile' element={<Profile />} />
 					<Route path='/deshBoard/:id' element={<DeshBoard />} />
-					<Route path='/Inventory/:id' element={<Inventory />} />
+					<Route
+						path='/Inventory/:id'
+						element={
+							<RequireAuth>
+								<Inventory />
+							</RequireAuth>
+						}
+					/>
 					<Route path='/manageProduct' element={<ManageProduct />} />
 					<Route path='/addNewItem' element={<AddNewIteam />} />
 					<Route path='/signup' element={<Signup />} />

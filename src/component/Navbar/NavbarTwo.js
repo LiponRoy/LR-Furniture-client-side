@@ -35,6 +35,16 @@ const NavbarTwo = () => {
 							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : ' myLink')} to='/'>
 								Home
 							</NavLink>
+							{user && (
+								<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : ' myLink')} to='/manageProduct'>
+									ManageProduct
+								</NavLink>
+							)}
+							{user && (
+								<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : ' myLink')} to='/addNewItem'>
+									AddNewItem
+								</NavLink>
+							)}
 
 							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/Signup'>
 								Signup

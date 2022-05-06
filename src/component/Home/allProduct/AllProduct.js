@@ -22,15 +22,19 @@ const AllProduct = () => {
 					<div key={prod._id} className='col-md-4'>
 						<div className=''>
 							<div className='product-card'>
-								<img src={prod.imgUrl} alt='' width='300px' />
-								<span>{prod.name}</span>
-								<span>{prod.price}</span>
-								<span>{prod.quantity}</span>
-								<span>{prod.supplier}</span>
-
-								<button className='btn btn-primary' onClick={() => navigate(`/Inventory/${prod._id}`)}>
-									Update
-								</button>
+								<div class='card'>
+									<img class='card-img-top' src={prod.imgUrl} alt='Card image cap' />
+									<div class='card-body'>
+										<h5 class='card-title'>Card title</h5>
+										<p>{prod.name}</p>
+										<p>{prod.price}</p>
+										<p>{prod.quantity}</p>
+										<p>{prod.supplier}</p>
+										<a href='#' class='btn btn-primary' onClick={() => navigate(`/Inventory/${prod._id}`)}>
+											Go somewhere
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
