@@ -98,13 +98,13 @@ const TopCategory = () => {
 
 	return (
 		<>
-			<div className='multiSlider'>
+			<div className='multiSliderHere'>
 				<h1>Top Category</h1>
 
 				<Slider {...settings_3}>
 					{sliderIteam.map(daa => (
-						<div className='cardMe'>
-							<div className='iteams text-start'>
+						<div className='cardMeHere'>
+							<div className='iteamsHere text-start'>
 								<img src={daa.img} alt='no img found' width='300' />
 								<h5>TK {`${daa.price}`} </h5>
 								<h6>{daa.desc}</h6>

@@ -3,14 +3,16 @@ import Footer from '../Footer/Footer';
 import AllProduct from './allProduct/AllProduct';
 import './Home.css';
 import HomeSlider from './HomeSlider/HomeSlider';
-import CustomerReview from './customerReview/TopCategory';
+import TopCategory from './customerReview/TopCategory';
+import Contact from './contact/Contact';
 
 const Home = () => {
 	return (
 		<div className='container-fluid'>
 			<HomeSlider></HomeSlider>
 			<AllProduct></AllProduct>
-			<CustomerReview></CustomerReview>
+			<TopCategory></TopCategory>
+			<Contact></Contact>
 			<Footer></Footer>
 		</div>
 	);

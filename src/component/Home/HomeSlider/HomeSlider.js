@@ -51,7 +51,7 @@ const HomeSlider = () => {
 								<div className='carddMe'>
 									<div className='iteams'>
 										<div className='imgPart'>
-											<img src={daa.img} alt='no img found' />
+											<img className='imagecl' src={daa.img} alt='no img found' />
 											<div className='textAll'>
 												<div className=''>
 													<h2>I Will Provide</h2>
