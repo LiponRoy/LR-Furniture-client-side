@@ -1,0 +1,48 @@
+.addForm{
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:column;
+            background-color: bisque;
+            height: 100vh;
+            text-align: start;
+}
+.myForm input{
+    
+}
+.name{
+    width: 600px;
+    margin:4px 0px;
+   
+}
+.desc {
+    width: 600px;
+    margin: 4px 0px;
+
+}
+.price {
+    width: 600px;
+    margin: 4px 0px;
+
+}
+.quantity {
+    width: 600px;
+    margin: 4px 0px;
+
+}
+.supplier {
+    width: 600px;
+    margin: 4px 0px;
+
+}
+.email {
+    width: 600px;
+    margin: 4px 0px;
+
+
+}
+.imgUrl {
+    width: 600px;
+    margin: 4px 0px;
+
+}

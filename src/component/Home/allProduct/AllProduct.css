@@ -1,10 +1,22 @@
 .product-card{
-    display: flex;
+    /* display: flex;
     align-items: start;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
 
-    background-color: rgba(27, 227, 238, 0.596);
-    margin: 12px;
-    padding: 12px;
+
+    
 }
+.card{
+ background-color: rgba(235, 235, 235, 0.596);
+ border: 1px solid rgb(114, 63, 4);
+ margin: 5px;
+ padding: 5px;
+height: 520px
+}
+
+/* .card img{
+
+    width: 320px;
+
+} */

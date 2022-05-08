@@ -1,0 +1,33 @@
+.productContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    height: 100vh;
+    text-align:start;
+   
+    
+}
+.allProduct{
+    background-color: rgb(245, 143, 18);
+    color:white;
+    margin: 15px;
+    display:inline;
+    padding:20px;
+}
+.productContainer img {
+    margin:8px;
+
+}
+.productContainer .name {
+    margin: 8px;
+
+}
+.productContainer .price {
+margin: 8px
+
+}
+.productContainer .quantity {
+    
+margin: 8px
+}

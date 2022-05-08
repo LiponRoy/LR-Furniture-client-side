@@ -37,11 +37,16 @@ const ManageProduct = () => {
 						// display Json Data using map function
 						<div key={prod._id} className='col-md-12'>
 							<div className='Manageproduct'>
-								<span>{prod.name}</span>
-								<span>{prod.price}</span>
-								<a onClick={() => deleteProduct(prod._id)} className='btn btn-primary'>
-									X
-								</a>
+								<div className='allProduct'>
+									<img src={prod.imgUrl} alt='img not found' width='50' height='50' />
+									<span className='name'>Name: {prod.name}</span>
+									<span className='price'>Price: {prod.price}</span>
+									<span className='quantity'>Quantity: {prod.quantity}</span>
+
+									<a onClick={() => deleteProduct(prod._id)} className='btn btn-primary'>
+										X
+									</a>
+								</div>
 							</div>
 						</div>
 					))}

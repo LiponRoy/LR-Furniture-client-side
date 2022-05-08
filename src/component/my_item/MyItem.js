@@ -1,25 +1,33 @@
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AllProduct.css';
+// import './AllProduct.css';
+import { auth } from '../../FirebaseConfig/Firebase-config';
+import { useAuthState } from 'react-firebase-hooks/auth';
 // import { myContext } from '../../App';
 // for context api
 
-const AllProduct = () => {
+const MyItem = () => {
+	const [user] = useAuthState(auth);
 	// const [product, setProduct] = useContext(myContext);
 	const [product, setProduct] = useState([]);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('https://infinite-depths-44773.herokuapp.com/product/getData')
+		fetch('http://localhost:4000/product/getData')
 			.then(response => response.json())
 			.then(data => setProduct(data.allProduct));
 	}, []);
+
+	const myProduct = product.filter(filteredProduct => {
+		return filteredProduct.user_email === user?.email;
+	});
+
 	return (
 		<div>
 			<h2>{product.length}</h2>
 			<div className='row'>
-				{product.map(prod => (
-					<div key={prod._id} className='col-md-4'>
+				{myProduct.map(prod => (
+					<div className='col-md-3'>
 						<div className=''>
 							<div className='product-card'>
 								<div class='card'>
@@ -45,4 +53,4 @@ const AllProduct = () => {
 	);
 };
 
-export default AllProduct;
+export default MyItem;

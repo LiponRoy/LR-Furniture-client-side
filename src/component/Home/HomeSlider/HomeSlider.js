@@ -34,7 +34,7 @@ const HomeSlider = () => {
 
 	let properticeMe = {
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 6000,
 		dots: true,
 		pauseOnHover: false,
 		fade: true,

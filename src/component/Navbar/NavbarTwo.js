@@ -17,16 +17,14 @@ const NavbarTwo = () => {
 	};
 	return (
 		<>
-			<div className='container-fluid'>
+			<div className='container-fluid fixed-top'>
 				<div className='liponNav'>
 					<div className='leftSide'>
 						<div className='logo'>
-							<h4>LR Furniture</h4>
+							<span>LR Furniture</span>
 						</div>
 					</div>
-					<div className='middleSide'>
-						<h5>middle side</h5>
-					</div>
+					<div className='middleSide'></div>
 					<div className='rightSide'>
 						<div className='toggleBut' onClick={() => setShowLink(!showLinks)}>
 							{showLinks ? <FaRegWindowClose></FaRegWindowClose> : <FaBars></FaBars>}
@@ -37,18 +35,29 @@ const NavbarTwo = () => {
 							</NavLink>
 							{user && (
 								<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : ' myLink')} to='/manageProduct'>
-									ManageProduct
+									Manage
 								</NavLink>
 							)}
 							{user && (
 								<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : ' myLink')} to='/addNewItem'>
-									AddNewItem
+									INSERT
+								</NavLink>
+							)}
+							{user && (
+								<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : ' myLink')} to='/myItem'>
+									MyItem
+								</NavLink>
+							)}
+							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : ' myLink')} to='/blog'>
+								Blog
+							</NavLink>
+
+							{!user && (
+								<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/Signup'>
+									Signup
 								</NavLink>
 							)}
 
-							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/Signup'>
-								Signup
-							</NavLink>
 							{user ? (
 								<a onClick={signOutTask} className='signout-btn'>
 									Signout

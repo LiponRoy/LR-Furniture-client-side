@@ -3,13 +3,14 @@ import Footer from '../Footer/Footer';
 import AllProduct from './allProduct/AllProduct';
 import './Home.css';
 import HomeSlider from './HomeSlider/HomeSlider';
+import CustomerReview from './customerReview/CustomerReview';
 
 const Home = () => {
 	return (
 		<div className='container-fluid'>
-			<h1>Bangladeshi</h1>
 			<HomeSlider></HomeSlider>
 			<AllProduct></AllProduct>
+			<CustomerReview></CustomerReview>
 			<Footer></Footer>
 		</div>
 	);
