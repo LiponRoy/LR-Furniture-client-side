@@ -1,7 +1,10 @@
 # LR Furniture
 
-Front End Link : https://something/
-Back end Link : https://something/
+Live site Link : https://lr-furniture.web.app/
+
+front end github : https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-LiponRoy
+
+back end end github : https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-LiponRoy
 
 ## Short Description
 
