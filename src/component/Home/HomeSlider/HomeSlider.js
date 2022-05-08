@@ -12,21 +12,21 @@ import img3 from '../../assets/slideImg/s4.jpg';
 const HomeSlider = () => {
 	const data = [
 		{
-			name: 'Best Furniture',
+			name: 'Make Your Home gorgeous',
 			img: img0,
 		},
 		{
-			name: 'Birthday Photography',
+			name: 'Make Your Home gorgeous',
 
 			img: img1,
 		},
 		{
-			name: 'Wedding Photography',
+			name: 'Make Your Home gorgeous',
 
 			img: img2,
 		},
 		{
-			name: 'Food Photography',
+			name: 'Make Your Home gorgeous',
 
 			img: img3,
 		},
@@ -34,7 +34,7 @@ const HomeSlider = () => {
 
 	let properticeMe = {
 		autoplay: true,
-		autoplaySpeed: 6000,
+		autoplaySpeed: 4000,
 		dots: true,
 		pauseOnHover: false,
 		fade: true,
@@ -54,8 +54,10 @@ const HomeSlider = () => {
 											<img className='imagecl' src={daa.img} alt='no img found' />
 											<div className='textAll'>
 												<div className=''>
-													<h2>I Will Provide</h2>
-													<h1>{daa.name}</h1>
+													<h1>Make</h1>
+													<h1>Your Home</h1>
+													<h1>Gorgeous</h1>
+													<h5>With (LR) Furniture</h5>
 												</div>
 											</div>
 										</div>

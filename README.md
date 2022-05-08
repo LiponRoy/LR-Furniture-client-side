@@ -1,18 +1,31 @@
-# Getting Started with Create React App
+# LR Furniture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Front End Link : https://something/
+Back end Link : https://something/
 
-## Available Scripts
+## Short Description
+
+This is inventory based web application.Where you can add product,delete product,
+Update product, Used google sign in method, email verification and so on.
+
+## What I have done
+
+-  I have made a nav bar witch include nav link and website logo.
+-  Used Silk Slider to make fantastic image slide show.
+-  Used Google Firebase Auth, include signup, login, reset password, email verification and so on.
+
+*  react routing include protected routing.
+*  include footer component, about component.
+
+## library and package used
+
+-  npm Firebase
+-  Bootstrap
+-  react-router-dom
+-  react-toastify
+-  react-icons and so on
 
 In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 

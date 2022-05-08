@@ -1,11 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../Loading/Loading';
 import './AllProduct.css';
-// import { myContext } from '../../App';
-// for context api
 
 const AllProduct = () => {
-	// const [product, setProduct] = useContext(myContext);
 	const [product, setProduct] = useState([]);
 	const navigate = useNavigate();
 
@@ -14,33 +12,42 @@ const AllProduct = () => {
 			.then(response => response.json())
 			.then(data => setProduct(data.allProduct));
 	}, []);
+
 	return (
 		<div>
-			<h2>{product.length}</h2>
-			<div className='row'>
-				{product.map(prod => (
-					<div key={prod._id} className='col-md-4'>
-						<div className=''>
-							<div className='product-card'>
-								<div class='card'>
-									<img class='card-img-top' src={prod.imgUrl} alt='Card image cap' />
-									<div class='card-body text-start'>
-										<h6 className='name'>{prod.name}</h6>
-										<h4 className='price'>{prod.price}</h4>
-										{/* <p>{prod.quantity}</p>
-										<p>{prod.supplier}</p>
-										<p>{prod.user_email}</p> */}
-
-										<a href='#' class='btn btn-primary' onClick={() => navigate(`/Inventory/${prod._id}`)}>
-											Update
-										</a>
+			{product.length != 0 ? (
+				<div>
+					<div className='someProduct'>
+						<h1>Some Product</h1>
+					</div>
+					<div className='row'>
+						{product?.slice(0, 6).map(prod => (
+							<div key={prod._id} className='col-md-4'>
+								<div className=''>
+									<div className='product-card'>
+										<div class='card'>
+											<img class='card-img-top' src={prod.imgUrl} alt='Card image cap' />
+											<div class='card-body text-start'>
+												<h5 className='name'>{prod.name}</h5>
+												<h4 className='price'>{prod.price} TK</h4>
+												<span>Quantity: {prod.quantity}</span>
+												<br></br>
+												<span>Supplier: {prod.supplier}</span>
+												<br></br>
+												<a href='#' class='btn btn-secondary btn-lg mt-2' onClick={() => navigate(`/Inventory/${prod._id}`)}>
+													Manage
+												</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						))}
 					</div>
-				))}
-			</div>
+				</div>
+			) : (
+				<Loading></Loading>
+			)}
 		</div>
 	);
 };

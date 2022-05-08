@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 // import './AllProduct.css';
 import { auth } from '../../FirebaseConfig/Firebase-config';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import './MyItem.css';
+import Loading from '../Loading/Loading';
 // import { myContext } from '../../App';
 // for context api
 
@@ -13,7 +15,7 @@ const MyItem = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('http://localhost:4000/product/getData')
+		fetch('https://infinite-depths-44773.herokuapp.com/product/getData')
 			.then(response => response.json())
 			.then(data => setProduct(data.allProduct));
 	}, []);
@@ -24,31 +26,33 @@ const MyItem = () => {
 
 	return (
 		<div>
-			<h2>{product.length}</h2>
-			<div className='row'>
-				{myProduct.map(prod => (
-					<div className='col-md-3'>
-						<div className=''>
-							<div className='product-card'>
-								<div class='card'>
+			{myProduct.length != 0 ? (
+				<div className='ItemMe'>
+					<div className=' row'>
+						{myProduct.map(prod => (
+							<div className='col-md-3'>
+								<div className='myItem text-start m-2'>
 									<img class='card-img-top' src={prod.imgUrl} alt='Card image cap' />
-									<div class='card-body text-start'>
-										<h6 className='name'>{prod.name}</h6>
+									<div className=''>
+										<span className='name'>{prod.name}</span>
 										<h4 className='price'>{prod.price}</h4>
-										{/* <p>{prod.quantity}</p>
-										<p>{prod.supplier}</p>
-										<p>{prod.user_email}</p> */}
-
-										<a href='#' class='btn btn-primary' onClick={() => navigate(`/Inventory/${prod._id}`)}>
-											Update
-										</a>
+										<span>Quantity: {prod.quantity}</span>
+										<br></br>
+										<span>Supplier: {prod.supplier}</span>
 									</div>
+									<a href='#' class='btn btn-secondary mt-2' onClick={() => navigate(`/Inventory/${prod._id}`)}>
+										Update
+									</a>
 								</div>
 							</div>
-						</div>
+						))}
 					</div>
-				))}
-			</div>
+				</div>
+			) : (
+				<div>
+					<Loading></Loading>
+				</div>
+			)}
 		</div>
 	);
 };

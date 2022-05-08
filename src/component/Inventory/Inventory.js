@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import './Inventory.css';
 // import './ProductDetail.css';
 const Inventory = () => {
 	const { id } = useParams();
@@ -8,7 +9,7 @@ const Inventory = () => {
 
 	const url = `https://infinite-depths-44773.herokuapp.com/product/getSingleDataByID/${id}`;
 
-	const dilever = () => {
+	const deliver = () => {
 		let dd = Number(singleProduct.quantity) - 1;
 		const quantity = dd;
 		const updateQuantity = { quantity };
@@ -51,35 +52,46 @@ const Inventory = () => {
 		fetch(url)
 			.then(response => response.json())
 			.then(data => setSingleProduct(data.SingleProduct));
-	}, [dilever, handleSubmit]);
+	}, [deliver, handleSubmit]);
 
 	return (
 		<div>
-			<div className='container myProd'>
-				<img src={singleProduct.imgUrl} alt='' width='300px' />
-				<h1>id is : {id}</h1>
-				<h4>Name: {singleProduct.name}</h4>
-				<h4>Desc :{singleProduct.description}</h4>
-				<h4>Price :{singleProduct.price}</h4>
-				<h4>Quantity :{singleProduct.quantity}</h4>
-
-				{/* <h4>Stock :{singleProduct.stock}</h4> */}
-				<br></br>
-				<form onSubmit={handleSubmit} className=''>
-					<input type='text' name='name' placeholder='Update your stock here' required />
-					<button type='submit' value='add user'>
-						update Stock
-					</button>
-				</form>
-
-				<button onClick={() => dilever()}>delevir</button>
-				<br></br>
-				<button
+			<div className='row myProd text-center'>
+				<div className='col-md-12 '>
+					<div className='contain'>
+						<img src={singleProduct.imgUrl} alt='' width='300px' />
+						<div className=''>
+							<h2>Name: {singleProduct.name}</h2>
+							<h6>id is : {id}</h6>
+							<h4>Desc :{singleProduct.description}</h4>
+							<h4>Price :{singleProduct.price}</h4>
+							<h4>Quantity :{singleProduct.quantity}</h4>
+							<h4>Email :{singleProduct.user_email}</h4>
+						</div>
+						<form onSubmit={handleSubmit} className=''>
+							<input type='text' name='name' placeholder='Update your stock here' required />
+							<button className='QuantityBtn' type='submit' value='add user'>
+								update Quantity
+							</button>
+							<div className='deliverBtn'>
+								<a onClick={() => deliver()}>delevir</a>
+								<br></br>
+							</div>
+						</form>
+						<span>If your net connection is slow then it will take some moment to update and deliver</span>
+					</div>
+				</div>
+				{/* <div className='col-md-6 '>
+					<br></br>
+				</div> */}
+			</div>
+			<div className='manageProductBtn'>
+				<a
 					onClick={() => {
 						navigate('/manageProduct');
 					}}>
 					Manage Prod
-				</button>
+				</a>
 			</div>
 		</div>
 	);

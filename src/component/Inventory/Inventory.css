@@ -1,0 +1,38 @@
+.myProd{
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: bisque;
+            height: 100vh;
+            
+            position: relative;
+
+}
+.manageProductBtn{
+    background-color: rgb(175, 91, 13);
+        color: white;
+        padding: 12px;
+        border: 4px solid white;
+        cursor: pointer;
+        border-radius: 12px;
+        text-transform: uppercase;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+}
+.deliverBtn{
+        background-color: rgb(175, 91, 13);
+            color: white;
+            padding: 12px;
+            border: 4px solid white;
+            display:inline;
+            cursor: pointer;
+}
+.QuantityBtn{
+            background-color: rgb(175, 91, 13);
+                color: white;
+                padding: 12px;
+                border: 4px solid white;
+                display: inline;
+                cursor: pointer;
+}

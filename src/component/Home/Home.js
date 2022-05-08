@@ -3,7 +3,7 @@ import Footer from '../Footer/Footer';
 import AllProduct from './allProduct/AllProduct';
 import './Home.css';
 import HomeSlider from './HomeSlider/HomeSlider';
-import TopCategory from './customerReview/TopCategory';
+import TopCategory from './topCat/TopCategory';
 import Contact from './contact/Contact';
 
 const Home = () => {

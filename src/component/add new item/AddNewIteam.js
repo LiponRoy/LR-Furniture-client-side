@@ -2,8 +2,10 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { auth } from '../../FirebaseConfig/Firebase-config';
+import { useNavigate, useParams } from 'react-router-dom';
 import './AddNewItem.css';
 const AddNewIteam = () => {
+	const navigate = useNavigate();
 	const [user] = useAuthState(auth);
 	console.log(user.email);
 	const {
@@ -27,17 +29,19 @@ const AddNewIteam = () => {
 			body: JSON.stringify(data),
 		})
 			.then(response => response.json())
-			.then(datas => console.log(datas));
+			.then(datas => datas.length != 0 && navigate('/'));
 	};
 
 	return (
 		<div className='addForm'>
-			<h1>Add new iteam !</h1>
+			<div>
+				<h3>ADD NEW ITEM</h3>
+			</div>
 			<form className=' d-flex flex-column myForm' onSubmit={handleSubmit(onSubmit)}>
 				<input className='name' placeholder='Enter name' {...register('name', { required: true })} />
 				<textarea className='desc' placeholder='Enter description' type='text' {...register('description', { required: true })} />
 				{/* {errors.lastName && <p>Last name is required.</p>} */}
-				<input className='price' placeholder='Enter price' type='number' {...register('price', { required: true })} />
+				<input className='price' placeholder='Enter price' type='text' {...register('price', { required: true })} />
 				<input className='quantity' placeholder='Enter quantity' type='number' {...register('quantity', { required: true })} />
 				<input className='supplier' placeholder='Enter supplier' type='text' {...register('supplier', { required: true })} />
 				<input className='email' placeholder='user_Email' value={user.email} {...register('user_email', { required: true })} readonly />
