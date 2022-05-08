@@ -1,6 +1,5 @@
 import './App.css';
 import Home from './component/Home/Home.js';
-import About from './component/About/About.js';
 import { Route, Routes } from 'react-router-dom';
 import NotFound from './component/NotFound/NotFound';
 import NavbarTwo from './component/Navbar/NavbarTwo';
@@ -24,7 +23,6 @@ function App() {
 
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='/about' element={<About />} />
 					<Route
 						path='/Inventory/:id'
 						element={
