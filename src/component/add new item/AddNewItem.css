@@ -46,3 +46,49 @@
     margin: 4px 0px;
 
 }
+
+@media (max-width: 768px) {
+    .name {
+            width: 400px;
+            margin: 4px 0px;
+    
+        }
+    
+        .desc {
+            width: 400px;
+            margin: 4px 0px;
+    
+        }
+    
+        .price {
+            width: 400px;
+            margin: 4px 0px;
+    
+        }
+    
+        .quantity {
+            width: 400px;
+            margin: 4px 0px;
+    
+        }
+    
+        .supplier {
+            width:400px;
+            margin: 4px 0px;
+    
+        }
+    
+        .email {
+            width: 400px;
+            margin: 4px 0px;
+    
+    
+        }
+    
+        .imgUrl {
+            width: 400px;
+            margin: 4px 0px;
+    
+        }
+
+}

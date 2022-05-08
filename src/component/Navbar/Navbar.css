@@ -5,7 +5,9 @@
     background-color: rgba(172, 81, 6, 0.767);
     height: 10vh;
     padding: 0px 20px;
+    margin:0px 12px;
     position: relative;
+    
 }
 .leftSide{
 flex: 1;
@@ -93,9 +95,9 @@ flex: 1;
                                     left: 0;
                                     right: 0;
                                     top: 74px;
-                                    height: 250px;
+                                    height: 350px;
                                     width: 100%;
-                                    background-color: rgb(129, 210, 248);
+                                    background-color: rgb(172, 81, 6);
 
                                     display: flex;
                                     justify-content: center;

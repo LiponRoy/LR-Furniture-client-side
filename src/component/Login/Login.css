@@ -21,7 +21,11 @@
 }
 
 .my-signup-form {
-    background-color: rgba(8, 105, 196, 0.377);
+    background-color: rgba(172, 81, 6, 0.767) !important;
     padding: 12px;
     border-radius: 12px;
+}
+.loginBtn {
+    background-color: rgba(211, 101, 11, 0.767) !important;
+    color: white;
 }

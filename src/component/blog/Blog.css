@@ -1,16 +1,6 @@
-.myBlog{
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-
-
-}
 
 .blogPart {
-    margin-top: 580px;
-    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,5 +12,19 @@
 
 .QA {
     text-align: start;
+
+}
+
+@media (max-width: 768px) {
+.blogPart {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 200px;
+
+    }
 
 }

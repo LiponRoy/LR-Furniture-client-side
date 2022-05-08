@@ -8,6 +8,11 @@
             position: relative;
 
 }
+.imageInv{
+    margin-top: 50px;
+    width: 350px;
+    height: 250px;
+}
 .manageProductBtn{
     background-color: rgb(175, 91, 13);
         color: white;
@@ -27,6 +32,7 @@
             border: 4px solid white;
             display:inline;
             cursor: pointer;
+          
 }
 .QuantityBtn{
             background-color: rgb(175, 91, 13);
@@ -35,4 +41,62 @@
                 border: 4px solid white;
                 display: inline;
                 cursor: pointer;
+                text-decoration: none;
+                
 }
+.QuantityBtn button {
+background-color: Transparent;
+border: none;
+color: white;
+}
+.QuantityBtn:hover {
+    color: white;
+
+}
+
+                .worningMsg {
+                    font-size: 14px;
+                    text-align: justify;
+                }
+
+ @media (max-width: 768px) {
+    .imageInv {
+            margin-top: 90px;
+            width: 150px;
+            height: 100px;
+        }
+.manageProductBtn {
+        background-color: rgb(175, 91, 13);
+        color: white;
+        padding: 8px;
+        border: 2px solid white;
+        cursor: pointer;
+        border-radius: 8px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+        .deliverBtn {
+            background-color: rgb(175, 91, 13);
+            color: white;
+            padding: 12px;
+            border: 4px solid white;
+            display: block;
+            cursor: pointer;
+            
+        }
+    
+        .QuantityBtn {
+            background-color: rgb(175, 91, 13);
+            color: white;
+            padding: 12px;
+            border: 4px solid white;
+            display: block;
+            cursor: pointer;
+        }
+        .worningMsg{
+            font-size: 12px;
+            text-align: justify;
+        }
+
+ }

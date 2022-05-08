@@ -3,17 +3,20 @@ import { NavLink } from 'react-router-dom';
 import { FaBars, FaRegWindowClose, FaSearch } from 'react-icons/fa';
 import './Navbar.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../../FirebaseConfig/Firebase-config';
 import { signOut } from 'firebase/auth';
 const NavbarTwo = () => {
 	const [user] = useAuthState(auth);
 	const [showLinks, setShowLink] = useState(false);
+	const navigate = useNavigate();
 
 	const closeFunc = () => {
 		setShowLink(false);
 	};
 	const signOutTask = () => {
 		signOut(auth);
+		navigate('/');
 	};
 	return (
 		<>

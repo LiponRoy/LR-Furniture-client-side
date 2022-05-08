@@ -46,3 +46,61 @@ margin: 8px
     
 margin: 8px
 }
+
+.mngBtn {
+
+    background-color: rgb(175, 91, 13) !important;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+.allProduct {
+        background-color: rgba(245, 143, 18, 0);
+        color: rgb(36, 36, 36);
+        margin: 8px;
+        display: inline;
+        padding: 8px;
+        font-size: 12px;
+     
+        
+    }
+
+    .nameProduct{
+        display: none;
+    }
+
+
+        .productContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(243, 233, 221);
+            height: none;
+            text-align: start;
+            position: relative;
+    
+    
+        }
+    
+        .btnAdd {
+            background-color: rgb(175, 91, 13);
+            color: white;
+            padding: 12px;
+            border: 4px solid white;
+            cursor: pointer;
+            border-radius: 12px;
+            text-transform: uppercase;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+    
+    
+        }
+
+
+
+
+
+
+}

@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../../FirebaseConfig/Firebase-config';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './MyItem.css';
-import Loading from '../Loading/Loading';
 // import { myContext } from '../../App';
 // for context api
 
@@ -26,33 +25,26 @@ const MyItem = () => {
 
 	return (
 		<div>
-			{myProduct.length != 0 ? (
-				<div className='ItemMe'>
-					<div className=' row'>
-						{myProduct.map(prod => (
-							<div className='col-md-3'>
-								<div className='myItem text-start m-2'>
-									<img class='card-img-top' src={prod.imgUrl} alt='Card image cap' />
-									<div className=''>
-										<span className='name'>{prod.name}</span>
-										<h4 className='price'>{prod.price}</h4>
-										<span>Quantity: {prod.quantity}</span>
-										<br></br>
-										<span>Supplier: {prod.supplier}</span>
-									</div>
-									<a href='#' class='btn btn-secondary mt-2' onClick={() => navigate(`/Inventory/${prod._id}`)}>
-										Update
-									</a>
-								</div>
+			<h2>{myProduct.length}</h2>
+			<div className=' row mt-5'>
+				{myProduct.map(prod => (
+					<div className='col-md-3'>
+						<div className='myItem text-start m-2'>
+							<img class='card-img-top' src={prod.imgUrl} alt='Card image cap' />
+							<div className=''>
+								<span className='name'>{prod.name}</span>
+								<h4 className='price'>{prod.price}</h4>
+								<span>Quantity: {prod.quantity}</span>
+								<br></br>
+								<span>Supplier: {prod.supplier}</span>
 							</div>
-						))}
+							<a href='#' class='btn btn-secondary mt-2 myItemBtn' onClick={() => navigate(`/Inventory/${prod._id}`)}>
+								Update
+							</a>
+						</div>
 					</div>
-				</div>
-			) : (
-				<div>
-					<Loading></Loading>
-				</div>
-			)}
+				))}
+			</div>
 		</div>
 	);
 };

@@ -43,11 +43,11 @@ const ManageProduct = () => {
 									<div className='Manageproduct'>
 										<div className='allProduct'>
 											<img src={prod.imgUrl} alt='img not found' width='50' height='50' />
-											<span className='name'>Name: {prod.name}</span>
+											<span className='nameProduct'>Name: {prod.name}</span>
 											<span className='price'>Price: {prod.price}</span>
 											<span className='quantity'>Quantity: {prod.quantity}</span>
 
-											<a onClick={() => deleteProduct(prod._id)} className='btn btn-primary'>
+											<a onClick={() => deleteProduct(prod._id)} className='btn btn-warning mngBtn'>
 												X
 											</a>
 										</div>

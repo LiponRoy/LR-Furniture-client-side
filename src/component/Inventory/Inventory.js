@@ -59,26 +59,31 @@ const Inventory = () => {
 			<div className='row myProd text-center'>
 				<div className='col-md-12 '>
 					<div className='contain'>
-						<img src={singleProduct.imgUrl} alt='' width='300px' />
+						<img className='imageInv img-thumbnail m-2' src={singleProduct.imgUrl} alt='' />
 						<div className=''>
-							<h2>Name: {singleProduct.name}</h2>
-							<h6>id is : {id}</h6>
+							<h3>Name: {singleProduct.name}</h3>
 							<h4>Desc :{singleProduct.description}</h4>
 							<h4>Price :{singleProduct.price}</h4>
 							<h4>Quantity :{singleProduct.quantity}</h4>
 							<h4>Email :{singleProduct.user_email}</h4>
+							<br></br>
 						</div>
 						<form onSubmit={handleSubmit} className=''>
 							<input type='text' name='name' placeholder='Update your stock here' required />
-							<button className='QuantityBtn' type='submit' value='add user'>
-								update Quantity
-							</button>
+							<div className='QuantityBtn'>
+								<button type='submit' value='add user'>
+									update Quantity
+								</button>
+							</div>
 							<div className='deliverBtn'>
 								<a onClick={() => deliver()}>delevir</a>
 								<br></br>
 							</div>
 						</form>
-						<span>If your net connection is slow then it will take some moment to update and deliver</span>
+						<br />
+						<span className='worningMsg'>Warning: If your internet connection is slow then it will take some moment to update and deliver</span>
+						<br></br>
+						<br></br>
 					</div>
 				</div>
 				{/* <div className='col-md-6 '>

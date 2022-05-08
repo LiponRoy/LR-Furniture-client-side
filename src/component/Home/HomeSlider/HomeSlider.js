@@ -54,10 +54,13 @@ const HomeSlider = () => {
 											<img className='imagecl' src={daa.img} alt='no img found' />
 											<div className='textAll'>
 												<div className=''>
-													<h1>Make</h1>
-													<h1>Your Home</h1>
-													<h1>Gorgeous</h1>
-													<h5>With (LR) Furniture</h5>
+													<span>Make</span>
+													<br></br>
+													<span>Your Home</span>
+													<br></br>
+													<span>Gorgeous</span>
+													<br></br>
+													<span>With (LR) Furniture</span>
 												</div>
 											</div>
 										</div>

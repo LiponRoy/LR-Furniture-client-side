@@ -102,7 +102,7 @@ const Signup = () => {
 								<input type='password' onChange={handleConfirmPassword} className='form-control' id='exampleInputPassword1' placeholder='ConfirmPassword' required />
 								{userError?.confirmPasswordError && <p className='signUpError'>{userError.confirmPasswordError}</p>}
 							</div>
-							<button type='submit' className='btn btn-secondary mt-2'>
+							<button type='submit' className='btn btn-warning mt-2 signupBtn'>
 								Submit
 							</button>
 

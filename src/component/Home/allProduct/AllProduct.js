@@ -27,17 +27,17 @@ const AllProduct = () => {
 									<div className='product-card'>
 										<div class='card'>
 											<img class='card-img-top' src={prod.imgUrl} alt='Card image cap' />
-											<div class='card-body text-start'>
-												<h5 className='name'>{prod.name}</h5>
+											<div class='card-body text-start cardMe'>
+												<span className='name'>{prod.name}</span>
 												<h4 className='price'>{prod.price} TK</h4>
 												<span>Quantity: {prod.quantity}</span>
 												<br></br>
 												<span>Supplier: {prod.supplier}</span>
 												<br></br>
-												<a href='#' class='btn btn-secondary btn-lg mt-2' onClick={() => navigate(`/Inventory/${prod._id}`)}>
-													Manage
-												</a>
 											</div>
+											<a href='#' class='btn btn-secondary btn-lg mt-2 proBtn' onClick={() => navigate(`/Inventory/${prod._id}`)}>
+												Manage
+											</a>
 										</div>
 									</div>
 								</div>

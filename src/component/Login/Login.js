@@ -93,7 +93,7 @@ const Login = () => {
 							{userError?.password && <p className='epError'>{userError.password}</p>}
 						</div>
 
-						<button type='submit' className='btn btn-secondary mt-2'>
+						<button type='submit' className='btn btn-warning mt-2 loginBtn'>
 							Submit
 						</button>
 					</form>

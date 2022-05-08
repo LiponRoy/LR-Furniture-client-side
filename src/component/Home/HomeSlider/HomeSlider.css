@@ -56,6 +56,7 @@
 	z-index: 5;
 }
 .textAll {
+	font-size: 32px;
 	text-align: center;
     text-transform: uppercase;
 	color: rgb(255, 255, 255);
@@ -64,7 +65,7 @@
 	top: 0;
 	bottom: 0;
 	right: 100px;
-	background-color: rgba(146, 12, 12, 0.616);
+		background-color: rgba(172, 81, 6, 0.774);
 	padding: 22px;
 	border-radius: 12px;
 
@@ -72,6 +73,7 @@
 	justify-content: center;
 	align-items: center;
 }
+
 
 /* ////Fast slide */
 
@@ -95,4 +97,29 @@
 	color: rgb(26, 26, 26);
 	font-size: 54px;
 	/* border: 5px solid red; */
+}
+
+@media (max-width: 768px) {
+
+.carddMe .iteams .imgPart img {
+		height: 60vh;
+	}
+
+				.textAll {
+						font-size: 16px;
+					text-align: center;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					padding: 2px;
+					position: absolute;
+					top: 130px;
+					bottom: 130px;
+					padding: 22px;
+					border-radius: 12px;
+	
+				}
+
+
+	
+
 }
