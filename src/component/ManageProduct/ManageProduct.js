@@ -30,7 +30,7 @@ const ManageProduct = () => {
 	// }, [product]);
 	return (
 		<div>
-			<div className='productContainer'>
+			<div className='productContainer mt-2'>
 				{/* {localStorage.getItem('parentValueKey')} */}
 				{/* <h1>All product{product.length}</h1> */}
 				{product.length != 0 ? (
@@ -40,7 +40,7 @@ const ManageProduct = () => {
 							{product.map(prod => (
 								// display Json Data using map function
 								<div key={prod._id} className='col-md-12'>
-									<div className='Manageproduct'>
+									<div className='Manageproduct '>
 										<div className='allProduct'>
 											<img src={prod.imgUrl} alt='img not found' width='50' height='50' />
 											<span className='nameProduct'>Name: {prod.name}</span>

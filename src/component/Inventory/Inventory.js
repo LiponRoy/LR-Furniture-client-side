@@ -63,7 +63,7 @@ const Inventory = () => {
 						<div className=''>
 							<h3>Name: {singleProduct.name}</h3>
 							<h4>Desc :{singleProduct.description}</h4>
-							<h4>Price :{singleProduct.price}</h4>
+							<h4>Price :{singleProduct.price} Tk</h4>
 							<h4>Quantity :{singleProduct.quantity}</h4>
 							<h4>Email :{singleProduct.user_email}</h4>
 							<br></br>

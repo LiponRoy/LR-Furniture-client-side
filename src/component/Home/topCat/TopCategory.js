@@ -99,7 +99,7 @@ const TopCategory = () => {
 	return (
 		<>
 			<div className='multiSliderHere'>
-				<h1>Top Category</h1>
+				<h3>TOP CATEGORY</h3>
 
 				<Slider {...settings_3}>
 					{sliderIteam.map(daa => (

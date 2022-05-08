@@ -18,7 +18,7 @@ const AllProduct = () => {
 			{product.length != 0 ? (
 				<div>
 					<div className='someProduct'>
-						<h1>Some Product</h1>
+						<h3>PRODUCTS</h3>
 					</div>
 					<div className='row'>
 						{product?.slice(0, 6).map(prod => (

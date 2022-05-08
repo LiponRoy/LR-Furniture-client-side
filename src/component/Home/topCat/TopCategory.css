@@ -13,9 +13,7 @@ width: 100px;
 }
 
 @media (max-width: 768px) {
-    .multiSliderHere {
-            display: none;
-    
-        }
-
+    .multiSliderHere{
+        display: none;
+    }
 }
