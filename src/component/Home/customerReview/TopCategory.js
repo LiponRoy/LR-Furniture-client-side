@@ -2,43 +2,43 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import './CustomerReview.css';
-import img1 from '../../assets/CR/moni1.JPG';
-import img2 from '../../assets/CR/moni2.JPG';
-import img3 from '../../assets/CR/moni3.JPG';
-import img4 from '../../assets/CR/moni4.JPG';
-import img5 from '../../assets/CR/moni1.JPG';
+import './TopCategory.css';
+import img1 from '../../assets/CR/cat1.jpg';
+import img2 from '../../assets/CR/cat2.jpg';
+import img3 from '../../assets/CR/cat3.jpg';
+import img4 from '../../assets/CR/cat4.jpg';
+import img5 from '../../assets/CR/cat5.jpg';
 
-const CustomerReview = () => {
+const TopCategory = () => {
 	const sliderIteam = [
 		{
-			price: '312',
+			price: '4,312',
 
-			desc: 'Lorem ipsum dolor',
+			desc: 'Smart Wooden Bedroom(12SD4)',
 			img: img1,
 		},
 		{
-			price: '5445',
+			price: '5,445',
 
-			desc: 'Lorem ipsum dolor ',
+			desc: 'Best Bed set(120SD4)',
 			img: img2,
 		},
 		{
-			price: '4339',
+			price: '12,339',
 
-			desc: 'Lorem ipsum dolor',
+			desc: 'Smart Chair(7Sc9)',
 			img: img3,
 		},
 		{
-			price: '10945',
+			price: '10,945',
 
-			desc: 'Lorem ipsum dolor',
+			desc: 'Tea Table and Smart Chair(45rt)',
 			img: img4,
 		},
 		{
-			price: '9014 ',
+			price: '19,014 ',
 
-			desc: 'Lorem ipsum dolor ',
+			desc: 'Sofa set (234mmx)',
 			img: img5,
 		},
 	];
@@ -48,16 +48,16 @@ const CustomerReview = () => {
 		autoplaySpeed: 2000,
 		dots: true,
 		//koyta kore show korbe
-		slidesToShow: 3,
+		slidesToShow: 4,
 		//arrow press korle koyta kore asbe
-		slidesToScroll: 3,
+		slidesToScroll: 2,
 		// vertical:true,
 		// verticalSwiping={true}
-		pauseOnHover: true,
+		pauseOnHover: false,
 		//fade={true}
 		touchMove: true,
 
-		initialSlide: 2,
+		initialSlide: 0,
 		infinite: true,
 		// centerPadding: '170px',
 		centerMode: true,
@@ -99,13 +99,15 @@ const CustomerReview = () => {
 	return (
 		<>
 			<div className='multiSlider'>
+				<h1>Top Category</h1>
+
 				<Slider {...settings_3}>
 					{sliderIteam.map(daa => (
 						<div className='cardMe'>
-							<div className='iteams'>
-								<img src={daa.img} alt='no img found' />
-								<p>{`${daa.price} TK`}</p>
-								<span>{daa.desc}</span>
+							<div className='iteams text-start'>
+								<img src={daa.img} alt='no img found' width='300' />
+								<h5>TK {`${daa.price}`} </h5>
+								<h6>{daa.desc}</h6>
 							</div>
 						</div>
 					))}
@@ -115,4 +117,4 @@ const CustomerReview = () => {
 	);
 };
 
-export default CustomerReview;
+export default TopCategory;

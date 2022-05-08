@@ -76,12 +76,13 @@
 
 .carddMe .iteams .imgPart {
     position: relative;
-    
+    width: 100%;
+        height: 100vh;
 
 }
 
 .carddMe .iteams .imgPart img {
-        width: 100%;
+        width: 1000%;
         height: 100vh;
         object-fit: cover;
     

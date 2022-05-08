@@ -12,7 +12,7 @@ import img3 from '../../assets/slideImg/s4.jpg';
 const HomeSlider = () => {
 	const data = [
 		{
-			name: 'Personal Photography',
+			name: 'Best Furniture',
 			img: img0,
 		},
 		{
